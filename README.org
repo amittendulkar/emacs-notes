@@ -1,6 +1,7 @@
 * Emacs cheatsheet
 
-| *Movement*                                       |                                              |                                                |
+** Movement
+  
 |--------------------------------------------------+----------------------------------------------+------------------------------------------------|
 | Left/right, up/down chars: =C-f/b, C-p/n=        | Left/right words: =M-f/b=                    | Page up/down: =C-v/M-v=                        |
 | Move point to line on screen: =C-u NUM M-r=      | Move focus to line: =C-u NUM C-l=            | Scroll up/down: =C-u NUM C-v/M-v=              |
@@ -11,7 +12,9 @@
 | Match braces: =C-M-f/b=                          | Repeat find in same/reverse: =C-s/r/DEL=     | Enter newline: =C-q C-j=                       |
 | Move to top/bottom line: =C-u 0/-1 M-r=          |                                              |                                                |
 |--------------------------------------------------+----------------------------------------------+------------------------------------------------|
-| *Editing*                                        |                                              |                                                |
+
+** Editing
+
 |--------------------------------------------------+----------------------------------------------+------------------------------------------------|
 | Delete char/word: =C-d/M-d=                      | Delete char/word before: =DEL/M-DEL=         | =C-/=: Undo/Redo                               |
 | Join line with previous: =M-^=                   | Indent/outdent: =TAB=                        | Comment/uncomment: =M-;=                       |
@@ -22,47 +25,63 @@
 | Copy/paste region from R : =C-x r s/i R=         | Select all: =C-x h=                          | Mark word/para: =M-@/h=                        |
 | Arrange para: =M-q=                              | Remove blank lines: =M-x flush-lines ^\s-*$= | Kill till CHAR: =M-z CHAR=                     |
 |--------------------------------------------------+----------------------------------------------+------------------------------------------------|
-| *File/Buffer/Window*                             |                                              |                                                |
+
+** File/Buffer/Window
+
 |--------------------------------------------------+----------------------------------------------+------------------------------------------------|
 | Open/save/save as: =C-x C-f/C-s/C-w=             | Switch/list buffers: =C-x b/C-b=             | Kill buffer: =C-x k=                           |
 | Close all but current: =C-x 1=                   | Split hori/vert: =C-x 2/3=                   | Scroll other wnd text: =M-PGUP/PGDN=           |
 | Cur wnd tall/wide/narrow: =C-x ^/}/{=            | Window number: =M-NUM/, NUM=                 | Scroll bottom wnd text: =C-M-v=                |
 |--------------------------------------------------+----------------------------------------------+------------------------------------------------|
-| *Dired*                                          |                                              |                                                |
+
+** Dired
+
 |--------------------------------------------------+----------------------------------------------+------------------------------------------------|
 | Open in dired mode: =C-x d DIR=                  | Move/Copy/Sort by name/date: =R/C/s=         | Mark/unmark/zip-unzip files: =m/u/z=           |
 | Edit dired buffer: =C-x C-q= (=C-c C-c= if done) | Remove ^M: =M-x shell-strip_ctrl-m=          | Hide details: =( / dired-hide-details-mode=    |
 |--------------------------------------------------+----------------------------------------------+------------------------------------------------|
-| *Macro*                                          |                                              |                                                |
+
+** Macro
+
 |--------------------------------------------------+----------------------------------------------+------------------------------------------------|
 | Start/stop macro: =C-x (/)=                      | Run macro: =C-u NUM C-x e=                   | Save NUM in register: =C-u 10 C-x r n R=       |
 | Increment R: =C-x r \+ R=                        | =M-x name-last-kbd-macro name=               | =M-x insert-kbd-macro= insert named macro      |
 |--------------------------------------------------+----------------------------------------------+------------------------------------------------|
-| *Shell*                                          |                                              |                                                |
-|--------------------------------------------------+----------------------------------------------+------------------------------------------------|
-| Emacs interpret/not: C-c C-j/C-k                 | Rename buffer: M-x rename-buffer             | Command history/next/prev: M-r/C-s/C-r         |
-| Remote sudo: /ssh:u1@h1 PIPE sudo:h1:FILE        |                                              | Shell: M-x ansi-term                           |
-| Prev/next command: M-p/M-n                       | Edit as sudo: C-x C-f /sudo::FILE            | On remote: /ssh:user@host:FILE                 |
-|--------------------------------------------------+----------------------------------------------+------------------------------------------------|
-| *Version Control*                                |                                              |                                                |
-|--------------------------------------------------+----------------------------------------------+------------------------------------------------|
-| C-x v v: next action commit (log buffer)         | C-c C-c: in log buffer will commit file      | C-x v =: Show diff                             |
-| C-x v d: vc dired mode (only changed files)      | Mark/unmark files/dir: m/u (same st: M/U)    | Visit file/dir in same/diff window: f/o        |
-| Next/previous dir entry: TAB/S-TAB               | Next/previous entry: n/p                     | Quit: q                                        |
-| Search/Query replace fileset: S/Q                | Revert file: C-x v u                         | Show revision history: C-x v l                 |
-| RevHist- move to next/prev entry: n/p            | Same as before except next/prev file: N/P    | Get latest revision: C-u C-x v v               |
-| Switch to branch: C-x v r BR-NAME/C-u C-x v v    | Hide up-to-date files: x                     |                                                |
-| (e.g. ^/ProdName/branches/ProdBranch)            |                                              |                                                |
-|--------------------------------------------------+----------------------------------------------+------------------------------------------------|
-| *Help*                                           |                                              |                                                |
-|--------------------------------------------------+----------------------------------------------+------------------------------------------------|
-| Active key bindings - C-h b                      | Info search index: C-h i d m emacs i STR     | Info search text: C-h i d m emacs s STR        |
-|                                                  | Help for func/cmd - C-h f/c                  | List functions with STR - C-h a STR            |
-#+TBLFM: $2=M-x name-last-kbd-macro name= last macro
 
-Regexps:
-| Match single: .          | Match zero/one or more: */+ | Match zero or one: ?           | Match non-greedy: *?/+?/?? |
-| Match N times: \{N\}     | Match M to N times: \{M,N\} | Match char set/range: [a-z0-9] | Match except range: [^a-z] |
-| Match begin/end: ^a/a$   | Match A or B: A\PIPEB       | Grouping construct: \(STR\)    | Backreference: \NUM        |
-| Word boundary: \b/\</\>  | Match whitespace: \s-       | Replace: replace-regexp        | Replace: string-replace    |
-| Ask before repl: query-* |                             |                                |                            |
+** Shell
+
+|---------------------------------------------+-------------------------------------+------------------------------------------|
+| Emacs interpret/not: =C-c C-j/C-k=          | Rename buffer: =M-x rename-buffer=  | Command history/next/prev: =M-r/C-s/C-r= |
+| Remote sudo: =/ssh:u1@h1 PIPE sudo:h1:FILE= |                                     | Shell: =M-x ansi-term=                   |
+| Prev/next command: =M-p/M-n=                | Edit as sudo: =C-x C-f /sudo::FILE= | On remote: =/ssh:user@host:FILE=         |
+|---------------------------------------------+-------------------------------------+------------------------------------------|
+
+** Version Control
+
+|-------------------------------------------------+-----------------------------------------------+-------------------------------------------|
+| Next action commit (log buffer): =C-x v v=      | In log buffer will commit file: =C-c C-c=     | Show diff: =C-x v=                        |
+| Vc dired mode (only changed files): =C-x v d=   | Mark/unmark files/dir: =m/u= (same st: =M/U=) | Visit file/dir in same/diff window: =f/o= |
+| Next/previous dir entry: =TAB/S-TAB=            | Next/previous entry: =n/p=                    | Quit: =q=                                 |
+| Search/Query replace fileset: =S/Q=             | Revert file: =C-x v u=                        | Show revision history: =C-x v l=          |
+| RevHist- move to next/prev entry: =n/p=         | Same as before except next/prev file: =N/P=   | Get latest revision: =C-u C-x v v=        |
+| Switch to branch: =C-x v r BR-NAME/C-u C-x v v= | Hide up-to-date files: =x=                    |                                           |
+| (e.g. =^/ProdName/branches/ProdBranch=)         |                                               |                                           |
+|-------------------------------------------------+-----------------------------------------------+-------------------------------------------|
+
+** Help
+
+|-------------------------------+--------------------------------------------+-----------------------------------------|
+| Active key bindings - =C-h b= | Info search index: =C-h i d m emacs i STR= | Info search text: =C-h i d m emacs s STR= |
+|                               | Help for func/cmd - =C-h f/c=              | List functions with STR - =C-h a STR=   |
+|-------------------------------+--------------------------------------------+-----------------------------------------|
+
+
+** Regexps
+
+|----------------------------+-------------------------------+----------------------------------+------------------------------|
+| Match single: =.=          | Match zero/one or more: =*/+= | Match zero or one: =?=           | Match non-greedy: =*?/+?/??= |
+| Match N times: =\{N\}=     | Match M to N times: =\{M,N\}= | Match char set/range: =[a-z0-9]= | Match except range: =[^a-z]= |
+| Match begin/end: =^a/a$=   | Match A or B: =A\PIPEB=       | Grouping construct: =\(STR\)=    | Backreference: =\NUM=        |
+| Word boundary: =\b/\</\>=  | Match whitespace: =\s-=       | Replace: =replace-regexp=        | Replace: =string-replace=    |
+| Ask before repl: =query-*= |                               |                                  |                              |
+|----------------------------+-------------------------------+----------------------------------+------------------------------|
