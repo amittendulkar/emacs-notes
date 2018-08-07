@@ -2,7 +2,7 @@
 
 ** Movement
   
-|--------------------------------------------------+----------------------------------------------+------------------------------------------------|
+
 | Left/right, up/down chars: =C-f/b, C-p/n=        | Left/right words: =M-f/b=                    | Page up/down: =C-v/M-v=                        |
 | Move point to line on screen: =C-u NUM M-r=      | Move focus to line: =C-u NUM C-l=            | Scroll up/down: =C-u NUM C-v/M-v=              |
 | Begin/End line: =C-a/e=                          | Begin/end sentence: =M-a/e=                  | Begin/end buffer: =M-</>=                      |
@@ -11,20 +11,20 @@
 | Find/replace: =M-% SRC RET DEST RET=             | Find word under point: =C-s C-w... C-s=      | Find ahead/behind: =C-s/C-r= (M-p/n srch hist) |
 | Match braces: =C-M-f/b=                          | Repeat find in same/reverse: =C-s/r/DEL=     | Enter newline: =C-q C-j=                       |
 | Move to top/bottom line: =C-u 0/-1 M-r=          |                                              |                                                |
-|--------------------------------------------------+----------------------------------------------+------------------------------------------------|
+
 
 ** Editing
 
-|--------------------------------------------------+----------------------------------------------+------------------------------------------------|
-| Delete char/word: =C-d/M-d=                      | Delete char/word before: =DEL/M-DEL=         | =C-/=: Undo/Redo                               |
-| Join line with previous: =M-^=                   | Indent/outdent: =TAB=                        | Comment/uncomment: =M-;=                       |
-| Transpose chars/words: =C-t/M-t=                 | Transpose lines: =C-x C-t=                   |                                                |
-| Cut/Copy region: =C-w/M-w=                       | Kill/copy rect: =C-x r k/M-w=                | Delete/Yank rect: =C-x r d/y=                  |
-| Newline after point/with spaces: =C-o/C-M-o=     | One space around point: =M-SPC=              | Upper/lower/Capitalize: =M-u/l/c=              |
-| Toggle show/hide block: =C-c @ c=                | Kill line/sentence: =C-k/M-k=                | Yank/Cycle through: =C-y/M-y=                  |
-| Copy/paste region from R : =C-x r s/i R=         | Select all: =C-x h=                          | Mark word/para: =M-@/h=                        |
-| Arrange para: =M-q=                              | Remove blank lines: =M-x flush-lines ^\s-*$= | Kill till CHAR: =M-z CHAR=                     |
-|--------------------------------------------------+----------------------------------------------+------------------------------------------------|
+|----------------------------------------------+----------------------------------------------+-----------------------------------|
+| Delete char/word: =C-d/M-d=                  | Delete char/word before: =DEL/M-DEL=         | Undo/Redo: =C-/=                  |
+| Join line with previous: =M-^=               | Indent/outdent: =TAB=                        | Comment/uncomment: =M-;=          |
+| Transpose chars/words: =C-t/M-t=             | Transpose lines: =C-x C-t=                   |                                   |
+| Cut/Copy region: =C-w/M-w=                   | Kill/copy rect: =C-x r k/M-w=                | Delete/Yank rect: =C-x r d/y=     |
+| Newline after point/with spaces: =C-o/C-M-o= | One space around point: =M-SPC=              | Upper/lower/Capitalize: =M-u/l/c= |
+| Toggle show/hide block: =C-c @ c=            | Kill line/sentence: =C-k/M-k=                | Yank/Cycle through: =C-y/M-y=     |
+| Copy/paste region from R : =C-x r s/i R=     | Select all: =C-x h=                          | Mark word/para: =M-@/h=           |
+| Arrange para: =M-q=                          | Remove blank lines: =M-x flush-lines ^\s-*$= | Kill till CHAR: =M-z CHAR=        |
+|----------------------------------------------+----------------------------------------------+-----------------------------------|
 
 ** File/Buffer/Window
 
