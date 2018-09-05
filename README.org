@@ -48,7 +48,7 @@
 
 ** Version Control
 
-| Next action commit (log buffer): =C-x v v=      | In log buffer will commit file: =C-c C-c=     | Show diff: =C-x v=                        |
+| Next action commit (log buffer): =C-x v v=      | In log buffer will commit file: =C-c C-c=     | Show diff: =C-x v ==                      |
 | Vc dired mode (only changed files): =C-x v d=   | Mark/unmark files/dir: =m/u= (same st: =M/U=) | Visit file/dir in same/diff window: =f/o= |
 | Next/previous dir entry: =TAB/S-TAB=            | Next/previous entry: =n/p=                    | Quit: =q=                                 |
 | Search/Query replace fileset: =S/Q=             | Revert file: =C-x v u=                        | Show revision history: =C-x v l=          |
