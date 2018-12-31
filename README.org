@@ -1,3 +1,11 @@
+* Operations
+This section points to various files for carrying out various operations in Emacs
+
+| *Operation*                    | *Package* |
+|--------------------------------+-----------|
+| StackExchange website activity | [[file:sx.org][Sx]]        |
+|                                |           |
+
 * Emacs cheatsheet
 
 ** Movement
