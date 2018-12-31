@@ -1,0 +1,32 @@
+* Introduction
+Refer to https://github.com/vermiculus/sx.el for details about Sx package and how to install them.
+
+This package can be used for interacting with StackExchange website directly through emacs.
+* Operations
+
+** Outside sx buffer
+| *Operation*            | *Command*            | *Shortcut* |
+|------------------------+----------------------+------------|
+| See all questions list | =sx-tab-all-questions= |            |
+
+** Inside sx buffer
+
+*** Questions list buffer
+| *Operation*               | *Shortcut*  |
+|---------------------------+-------------|
+| Navigate list             | =n= and =p= |
+| Ask question              | =a=         |
+| Open question buffer      | =RET=       |
+| Upvote/downvote question  | =u= and =d= |
+| Visit question in browser | =v=         |
+| Copy question link        | =w=         |
+
+*** Question buffer
+
+| *Operation*                     | *Shortcut*  |
+|---------------------------------+-------------|
+| Upvote/downvote question/answer | =u= and =d= |
+| Accept answer                   | =sx-answer= |
+| Add answer                      | =a=         |
+| Edit question/answer/comment    | =e=         |
+| Copy code at point              | =w=         |
