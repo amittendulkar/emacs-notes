@@ -19,7 +19,7 @@ Refer to the below Ivy mode info to effectively find and execute commands in Ema
 |---------+-------------------------------------------------------------|
 | =RET=   | Accept current candidate                                    |
 | =C-M-j= | Accept current input instead of current candidate           |
-| =C-'=   | Faster machnism to select candidate than =C-n= and =C-p=    |
+| C-'     | Faster machnism to select candidate than =C-n= and =C-p=    |
 | =C-M-m= | Select candidate but keep minibuffer open for further input. =C-M-p/n= is faster. | 
 
 ** Minibuffer altering
