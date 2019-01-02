@@ -1,3 +1,47 @@
+* Ivy Mode
+Refer to the below Ivy mode info to effectively find and execute commands in Emacs
+
+| *Operation*        | *Command*                    |
+|--------------------+------------------------------|
+| Search text        | =swiper=                     |
+| Execute command    | =counsel-M-x=                |
+| Find file          | =counsel-find-file=          |
+| Describe function  | =counsel-describe-function=  |
+| Describe variable  | =counsel-describe-variable=  |
+| Find library       | =counsel-find-library=       |
+| Info lookup symbol | =counsel-info-lookup-symbol= |
+
+** Navigation
+
+=C-n=, =C-p=, =M-<=, =M->=, =C-v=, =M-v=
+
+| *Key*   | *Operation*                                                 |
+|---------+-------------------------------------------------------------|
+| =RET=   | Accept current candidate                                    |
+| =C-M-j= | Accept current input instead of current candidate           |
+| =C-'=   | Faster machnism to select candidate than =C-n= and =C-p=    |
+| =C-M-m= | Select candidate but keep minibuffer open for further input. =C-M-p/n= is faster. | 
+
+** Minibuffer altering
+
+| *Key*   | *Operation*                   |
+|---------+-------------------------------|
+| =M-n/p= | Next/previous history element |
+| =M-j=   | Insert word at point          |
+| =S-SPC= | Narrowing                     |
+| =C-r=   | Search commands history       |
+
+* Info
+
+| *Operation*                   | *Key*              |
+|-------------------------------+--------------------|
+| Search in current manual      | =s=                |
+| Use isearch to search         | =C-s= or =C-M-s=   |
+| Search across all manuals     | =M-x info-apropos= |
+| Navigate down/up              | =SPC/DEL=          |
+| Navigate back through history | =l=                |
+| Visit node                    | =m title=          |
+
 * Operations
 This section points to various files for carrying out various operations in Emacs
 
