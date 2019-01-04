@@ -3,15 +3,16 @@ Adding typical shortcuts I use or need to use
 
 ** Groups buffer
 
-| *Operation*                                 | *Key*        |
-|---------------------------------------------+--------------|
-| Enter group                                 | =RET=        |
-| Catchup email                               | =c=          |
-| Check email                                 | =g=          |
-| Quit Gnus                                   | =q=          |
-| Show all groups                             | =L= or =A A= |
-| Show subscribed groups with unread messages | =l=          |
-| Show killed groups                          | =A k=        |
+| *Operation*                                 | *Key*                                                       |
+|---------------------------------------------+-------------------------------------------------------------|
+| Enter group                                 | =RET=                                                       |
+| Catchup email                               | =c=                                                         |
+| Check email                                 | =g=                                                         |
+| Quit Gnus                                   | =q=                                                         |
+| Show all groups                             | =L= or =A A= (fetch from server)                             |
+| Show subscribed groups with unread messages | =l=                                                         |
+| Show killed groups                          | =A k=                                                       |
+| Search email                                | =C-u G G= and e.g. =from TEXT since DATE= format =imap RET= |
 
 ** Summary buffer
 
