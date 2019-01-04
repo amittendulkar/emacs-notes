@@ -28,3 +28,6 @@
 | next previous tab             | C-c C-n/p   |
 | delete/close tab              | C-c C-w     |
 | quit                          | Q           |
+| Next/previous images          | {}          |
+| Toggle image visibility       | i           |
+| All images visibility         | I           |
