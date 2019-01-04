@@ -1,0 +1,30 @@
+* Shortcuts
+| *Action*                      | *Key*       |
+|-------------------------------+-------------|
+| visit link under point        | RET         |
+| submit form at point          | C-c C-c     |
+| Move point to next anchor     | TAB         |
+| Next/previous form            | []          |
+| previous page in history      | l           |
+| visit web page                | g           |
+| in new session                | G           |
+| Goto home                     | H           |
+| open link using browser       | M           |
+| Move tab to left/right        | C-c C-</C-> |
+| download under point          | D           |
+| toggle image under point      | i           |
+| url under point to kill-ring  | Y           |
+| scroll up/down                | SPC/DEL     |
+| mark current position         | C-c C-@     |
+| Goto last marked position     | C-c C-v     |
+| query search engine           | s           |
+| with new session              | S           |
+| display bookmark              | v           |
+| in new session                | V           |
+| Add current page to bookmark  | a           |
+| url under point to bookmark   | M-a         |
+| empty page new session visit. | C-t t       |
+| copy tab                      | C-c C-t     |
+| next previous tab             | C-c C-n/p   |
+| delete/close tab              | C-c C-w     |
+| quit                          | Q           |
