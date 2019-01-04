@@ -48,7 +48,8 @@ This section points to various files for carrying out various operations in Emac
 | *Operation*                    | *Package* |
 |--------------------------------+-----------|
 | StackExchange website activity | [[file:sx.org][Sx]]        |
-|                                |           |
+| Web browsing                   | [[file:w3m.org][w3m]]       |
+| Email, News                    | [[file:gnus.org][Gnus]]      |
 
 * Emacs cheatsheet
 
