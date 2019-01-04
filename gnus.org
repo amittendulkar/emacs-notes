@@ -1,0 +1,35 @@
+* Shortcuts
+Adding typical shortcuts I use or need to use
+
+** Groups buffer
+
+| *Operation*                                 | *Key*        |
+|---------------------------------------------+--------------|
+| Enter group                                 | =RET=        |
+| Catchup email                               | =c=          |
+| Check email                                 | =g=          |
+| Quit Gnus                                   | =q=          |
+| Show all groups                             | =L= or =A A= |
+| Show subscribed groups with unread messages | =l=          |
+| Show killed groups                          | =A k=        |
+
+** Summary buffer
+
+| *Operation*                   | *Key*     |
+|-------------------------------+-----------|
+| Mark read                     | =d=       |
+| Mark expired                  | =E=       |
+| Process mark                  | =#=       |
+| Remove process mark           | =M-#=     |
+| Move to other group           | =B m=     |
+| Fetch new email               | =/ N=     |
+| Catchup email                 | =c=       |
+| Process mark in a region      | =M P r=   |
+| Compose email                 | =m=       |
+| Send email                    | =C-c C-c= |
+| Attach file                   | =C-c C-a= |
+| Forward email (as attached)   | =C-c C-f= |
+| Edit email (to see HTML text) | =e=       |
+| Flag article                  | =!=       |
+| Remove all marks (unread)     | =M-u=     |
+
