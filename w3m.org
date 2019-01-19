@@ -1,20 +1,20 @@
 * Shortcuts
 | *Action*                      | *Key*       |
 |-------------------------------+-------------|
-| visit link under point        | RET         |
-| submit form at point          | C-c C-c     |
+| Visit link under point        | RET         |
+| Submit form at point          | C-c C-c     |
 | Move point to next anchor     | TAB         |
 | Next/previous form            | []          |
-| previous page in history      | l           |
-| visit web page                | g           |
-| in new session                | G           |
+| Previous page in history      | l           |
+| Visit web page                | g           |
+| In new session                | G           |
 | Goto home                     | H           |
-| open link using browser       | M           |
+| Open link using browser       | M           |
 | Move tab to left/right        | C-c C-</C-> |
-| download under point          | D           |
-| toggle image under point      | i           |
-| url under point to kill-ring  | Y           |
-| scroll up/down                | SPC/DEL     |
+| Download under point          | D           |
+| Toggle image under point      | i           |
+| Url under point to kill-ring  | Y           |
+| Scroll up/down                | SPC/DEL     |
 | mark current position         | C-c C-@     |
 | Goto last marked position     | C-c C-v     |
 | query search engine           | s           |
