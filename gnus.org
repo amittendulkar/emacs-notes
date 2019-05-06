@@ -33,4 +33,5 @@ Adding typical shortcuts I use or need to use
 | Edit email (to see HTML text) | =e=       |
 | Flag article                  | =!=       |
 | Remove all marks (unread)     | =M-u=     |
+| Save attachment               | =o=       |
 
