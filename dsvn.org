@@ -1,0 +1,39 @@
+Type =M-x svn-status= followed by working dir to get svn status output
+
+Type =M-x svn-log= to get svn log.
+
+* Mark/unmark
+| =m=     | mark and go down   |
+| =DEL=   | unmark and go up   |
+| =u=     | unmark and go down |
+| =SPC=   | toggle mark        |
+| =M-DEL= | unmark all         |
+
+* Operations on files
+
+| =f=  | Visit file under point                          |
+| =o=  | Visit file under point, another window          |
+| =\== | Show diff of uncommitted changes                |
+|      | Using C-u will use marks                        |
+| =c=  | Commit                                          |
+| =a=  | Add                                             |
+| =r=  | Remove                                          |
+| =R=  | Resolve conflicts                               |
+| =M=  | Rename/move files                               |
+| =U=  | Revert files                                    |
+| =P=  | View/edit properties of file or dir under point |
+| =l=  | Log of file/dir under point                     |
+NOTE: Under point commands don't use marks.
+
+* Status buffer update
+
+| =g= | Rerun svn status. =C-u= clears the list first |
+| =s= | Update status of selected files               |
+| =S= | Show status of specific file or dir           |
+| =x= | Expunge unchanged files from the list         | 
+
+* Update working copy
+
+| =M-u= | Run svn update. =C-u= will ask for =REV= |
+| =M-s= | Switch to another branch                 |
+| =M-m= | Merge using =svn merge=                  |
