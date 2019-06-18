@@ -1,29 +1,46 @@
 * Getting started
 
-| *Task*                            | *Cmdlet*                                                                                                        |
-|-----------------------------------+-----------------------------------------------------------------------------------------------------------------|
-| Discover new commands             | Get-Command  *-Service                                                                                          |
-| Get help about command            | Get-Help Get-Service                                                                                            |
-| Fully understand output of cmdlet | Get-Service \vert Get-Member                                                                                    |
-| Get original command for alias    | Get-Alias cls                                                                                                   |
-| Get online help                   | Get-Help Get-ChildItem -Online                                                                                  |
-| Access env variable               | $env:Home (also [Enrivonment]::GetEnvironmentVariable("VARNAME", "Process"))                                    |
-| Check env variable defined        | if( -not (Test-Path env:VAR)) { command }                                                                       |
-| Create variable                   | $loc = Get-Location                                                                                             |
-| Get properties of variable        | $loc \vert Get-Member                                                                                           |
-| Get page wise output              | cmdlet \vert Out-Host -Paging                                                                                   |
-| Format output                     | cmdlet \vert Format-Table -Property Name1,Name2 -AutoSize -Wrap                                                 |
-| Compare file contents             | Compare-Object -ReferenceObject $(Get-Content file1path) -DifferenceObject $(Get-Content file2path)             |
-| Replace file content              | (Get-Content -Path FILE) \vert ForEach-Object { $_ -CReplace 'Warning', 'Caution'} \vert Set-Content -Path FILE |
-| ls                                | Get-ChildItem                                                                                                   |
-| clear                             | Clear-Host                                                                                                      |
-| cp, mv, rm/rmdir                  | Copy-Item, Move-Item, Remove-Item, Rename-Item                                                                  |
-| pwd                               | Get-Location                                                                                                    |
-| pushd/popd/cd                     | Push-Location/Pop-Location/Set-Location                                                                         |
-| tee                               | Tee-Object                                                                                                      |
-| echo                              | Write-Output                                                                                                    |
-| ps/kill                           | Get-Process/Stop-Process                                                                                        |
-| find/grep                         | Select-String -Path PATH -Pattern PATTERN -CaseSensitive                                                        |
-| set                               | Set-Variable                                                                                                    |
-| wget, curl                        | Invoke-WebRequest                                                                                               |
-| Capture output of external cmd    | $log = Invoke-Expression "svn.exe up --username `"amit.tendulkar`""                                             |
+| *Task*                            | *Cmdlet*                                                                                                       |
+|-----------------------------------+----------------------------------------------------------------------------------------------------------------|
+| Discover new commands             | Get-Command  *-Service                                                                                         |
+| Get help about command            | Get-Help Get-Service                                                                                           |
+| Fully understand output of cmdlet | Get-Service \vert Get-Member                                                                                   |
+| Get original command for alias    | Get-Alias cls                                                                                                  |
+| Get online help                   | Get-Help Get-ChildItem -Online                                                                                 |
+| Access env variable               | $env:Home (also [Enrivonment]::GetEnvironmentVariable("VARNAME", "Process"))                                   |
+| Check env variable defined        | if( -not (Test-Path env:VAR)) { command }                                                                      |
+| Create variable                   | $loc = Get-Location                                                                                            |
+| Get properties of variable        | $loc \vert Get-Member                                                                                          |
+| Get page wise output              | cmdlet \vert Out-Host -Paging                                                                                  |
+| Format output                     | cmdlet \vert Format-Table -Property Name1,Name2 -AutoSize -Wrap                                                |
+| Compare file contents             | Compare-Object -ReferenceObject $(Get-Content file1path) -DifferenceObject $(Get-Content file2path)            |
+| Replace file content              | (Get-Content -Path FILE) \vert ForEach-Object { $_ -Replace 'Warning', 'Caution'} \vert Set-Content -Path FILE |
+| ls                                | Get-ChildItem                                                                                                  |
+| clear                             | Clear-Host                                                                                                     |
+| cp, mv, rm/rmdir                  | Copy-Item, Move-Item, Remove-Item, Rename-Item                                                                 |
+| pwd                               | Get-Location                                                                                                   |
+| pushd/popd/cd                     | Push-Location/Pop-Location/Set-Location                                                                        |
+| tee                               | Tee-Object                                                                                                     |
+| echo                              | Write-Output                                                                                                   |
+| ps/kill                           | Get-Process/Stop-Process                                                                                       |
+| find/grep                         | Select-String -Path PATH -Pattern PATTERN -CaseSensitive                                                       |
+| set                               | Set-Variable                                                                                                   |
+| wget, curl                        | Invoke-WebRequest                                                                                              |
+| Capture output of external cmd    | $log = Invoke-Expression "svn.exe up --username `"amit.tendulkar`""                                            |
+
+* Connecting to Oracle and fetching data
+
+#+BEGIN_SRC sh
+  [string]$query = "select * from my_table"
+  [System.Reflection.Assembly]::LoadWithPartialName("System.Data.OracleClient") | out-null
+  $connection = new-object system.data.oracleclient.oracleconnection( `
+  "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=your Oracle server IP)(PORT=1521)) `
+  (CONNECT_DATA=(SERVICE_NAME=Service Name)));User Id=Username;Password=Password;");
+  $adapter = new-object system.data.oracleclient.oracledataadapter ($query, $connection)
+  $set = new-object system.data.dataset
+  $adapter.Fill($set)
+  $table = new-object system.data.datatable
+  $table = $set.Tables[0]
+  $f = $table | select "COLUMN1", "COLUMN2"
+  $f | ForEach-Object { Write-Host ($_.COLUMN1, $_.COLUMN2) -Separator " | " }
+#+END_SRC
