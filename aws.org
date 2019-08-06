@@ -1,0 +1,56 @@
+* AWS Compute
+ - EC2: Web Service for computing (computer/server on cloud)
+   - On-demand: Charge by hour. Increase-decrease capacity.
+   - Reserved: Upto 75% discount compared to On-demand
+   - Spot: Bid on spare EC2 capacity. Significantly reduced cost.
+ - ECR: Container Registry: Store, manage, deploy docker container images
+ - RECS: Auto-scaling: Automatically add/remove EC2 instances based on your conditions. (dynamic or predictive scaling)
+ - EKR: Kubernate
+ - Beanstalk: Web App hosting by uploading code
+ - Lambda: Charge based on computation used by your code (can be triggered by other Amazone services, web/mobile app etc.). No provisioning of servers.
+ - AWS IAM users and roles
+   - Root user: your email address login (don't use this)
+   - Can share your EC2 or S3 (storage) instances with other users with different permission levels (e.g. read only)
+   - You can access IAM through
+     - Management Console
+     - CLI
+     - SDKs
+     - HTTPS API (code to digitally sign requests using your credentials)
+ - IAM elements
+   - Principle: Entity making request for action or operation on AWS resource (users/roles/apps)
+     - Root user: 1st principle
+   - Request: Principle sends request to AWS
+     - Request context: evaluate
+   - Authentication
+     - S3: few anonymous requests allowed (exception)
+     - Access key, secret key. Additional: if multi-factor authentication enabled.
+   - Authorization
+     - Values from request contexts to apply policies (to allow/deny requests)
+     - Policies stored as json docs.
+     - Permission
+       - policies: identity based, resource based, ACLs
+       - boundaries: use policies to allow max permissions the priciple can have
+   - Actions/Operations: defined by service on a resource
+   - Resources (e.g. EC2 instance, IAM user)
+ - IAM best practices
+   - Lock away root account credentials
+   - Create individual users (including yourself)
+   - Use groups to assign permissions (assign users)
+   - Use AWS defined policies
+   - Grant least privileges
+   - Review IAM permissions (regularly review/monitor)
+   - String password policy
+   - MFA for privilege users
+   - Use roles for EC2 applications
+   - Use roles to delegate permissions
+   - Don't share access keys
+   - Rotate credentials
+   - Remove unnecessary credentials
+   - Use policy conditions (e.g. range of allowable IP addresses to access instance)
+   - Monitor activity
+* AWS Storage
+ - S3: Simple Storage Service
+ - Elastic Block Storage (EBS)
+ - Elastic File System (EFS)
+ - Glacier
+ - Storage Gateway
