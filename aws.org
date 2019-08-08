@@ -54,3 +54,29 @@
  - Elastic File System (EFS)
  - Glacier
  - Storage Gateway
+** EBS
+ - SDD: for transactional systems
+   - io1 - high perf
+   - gp2
+ - HDD: for high throughput systems (e.g. map reduce)
+   - st1
+   - sc1 (cold HDD)
+ - Volume types
+   - Data lifecycle manager: automatic snapshots (no need to have snapshoting scripts)
+   - Elastic volumns: increase/decrease volume/performance
+   - Snapshots: keep incremental snapshot in other bucket
+   - Optimized instances: dedicated network bandwidth between EC2 and EBS
+   - Availability & Durability
+   - Encryption
+** Comparison
+ - S3: most common (object storage)
+ - EFS: massive concurrent access. File storage.
+ - EBS: restricted to single AZ (availability zone), block storage
+   - Go to EC2 dashboard and select EBS through menu
+* RDS
+ - Amazon Aurora
+ - Oracle
+ - MySQL
+ - PostgreSQL
+ - MariaDB
+ - Microsoft SQL Server
