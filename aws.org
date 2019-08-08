@@ -80,3 +80,14 @@
  - PostgreSQL
  - MariaDB
  - Microsoft SQL Server
+* AWS Migration
+Options available
+ - Application discovery service
+ - Database migration service
+ - Server migration service
+ - Snowball
+* VPC (Virtual Private Cloud)
+ - Create VPC (with 1 public subnet): you can have private subnet for DB etc.. you can have hardware connection for connecting on-premise network to vpc.
+ - Launch instance with the VPC
+ - Create security group (in-bound/out-bound rules) - associated with instance (network ACL associated overall - can have allow/deny rules, stateless)
+ - Create Elastic IP (public facing IP): map it to existing EC2 instance in the vpc.
