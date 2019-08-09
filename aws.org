@@ -91,3 +91,19 @@ Options available
  - Launch instance with the VPC
  - Create security group (in-bound/out-bound rules) - associated with instance (network ACL associated overall - can have allow/deny rules, stateless)
  - Create Elastic IP (public facing IP): map it to existing EC2 instance in the vpc.
+* CloudFront
+Utilizes Edge locations for achieving low latency
+Features
+ - Security
+ - Availablility
+ - Performance
+ - DevOps friendly
+ - Lambda Edge
+Process
+ - Create S3 bucket and upload documents
+ - Documents are visible over Internet
+ - Create CloudFront distribution
+ - Associate S3 bucket
+ - Can now access S3 bucket files using CloudFront domain (edge location's cache used)
+* AWS Route53
+DNS resolution for AWS
