@@ -107,3 +107,22 @@ Process
  - Can now access S3 bucket files using CloudFront domain (edge location's cache used)
 * AWS Route53
 DNS resolution for AWS
+* Elastic Load Balancing (ELB)
+Types
+ - Application LB: HTTP/HTTPS traffic (request routing)
+ - Network LB: TCP traffic (connecting/Layer4 routing)
+ - Classic LB: both request and connection level
+Create through EC2 - ELB.
+* AWS Management Tools
+Tools
+ - CloudFormation: Simple text file to model resource requirements
+ - CloudWatch
+ - CloudTrail: Track user activity and API usage
+ - EC2 Systems Manager: Operate and manage resources at scale (group resources)
+ - AWS Config: inventory, config history
+ - AWS Trusted Adviser: scan your AWS infra, compares it to AWS best practices in 5 categories and provides recommended actions
+   - Cost optimization
+   - Performance
+   - Security
+   - Fault tolerance
+   - Service limits
