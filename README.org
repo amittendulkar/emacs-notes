@@ -47,6 +47,7 @@ This section points to various files for carrying out various operations in Emac
 
 | *Operation*                    | *Package* |
 |--------------------------------+-----------|
+| SVN                            | [[file:dsvn.org][dsvn]]  |
 | StackExchange website activity | [[file:sx.org][Sx]]        |
 | Web browsing                   | [[file:w3m.org][w3m]]       |
 | Email, News                    | [[file:gnus.org][Gnus]]      |
@@ -107,7 +108,7 @@ This section points to various files for carrying out various operations in Emac
 | Search/Query replace fileset: =S/Q=             | Revert file: =C-x v u=                        | Show revision history: =C-x v l=          |
 | RevHist- move to next/prev entry: =n/p=         | Same as before except next/prev file: =N/P=   | Get latest revision: =C-u C-x v v=        |
 | Switch to branch: =C-x v r BR-NAME/C-u C-x v v= | Hide up-to-date files: =x=                    |                                           |
-| (e.g. =^/ProdName/branches/ProdBranch=)         |                                               |                                           |
+| (e.g. =^/ProdName/branches/ProdBranch=)         | Get latest: =+=                               |                                           |
 
 ** Help
 
