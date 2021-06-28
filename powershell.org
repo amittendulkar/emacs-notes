@@ -46,3 +46,24 @@
   $f = $table | select "COLUMN1", "COLUMN2"
   $f | ForEach-Object { Write-Host ($_.COLUMN1, $_.COLUMN2) -Separator " | " }
 #+END_SRC
+
+* Running commands on remote computer
+ - First on remote computer run the below command (in PowerShell window with Admin privileges)
+#+BEGIN_SRC sh
+  Enable-PSRemoting -Force
+#+END_SRC
+ - If your machine is not in the domain
+   - Change the network to private
+   - Run below commandlet to trust any PC to connect remotely
+#+BEGIN_SRC sh
+  Set-Item wsman:\localhost\client\trustedhosts *  # Or use comma separated IP/names
+  Restart-Service WinRM
+#+END_SRC
+ - Test the connection
+#+BEGIN_SRC sh
+  Test-WsMan COMPUTER
+#+END_SRC
+ - Run command on remote using the below syntax
+#+BEGIN_SRC sh
+  Invoke-Command -ComputerName COMPUTER -ScriptBlock { COMMAND } -credential USERNAME
+#+END_SRC
